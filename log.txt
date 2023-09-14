@@ -1,0 +1,31 @@
+-------------------------------
+Thu Sep 14 03:39:09 PM WEST 2023
+make -C src/ clean
+make[1]: Entering directory '/rtl/r8168/src'
+make -C /lib/modules/6.1.0-11-amd64/build M=/rtl/r8168/src clean
+make[2]: Entering directory '/usr/src/linux-headers-6.1.0-11-amd64'
+make[2]: Leaving directory '/usr/src/linux-headers-6.1.0-11-amd64'
+make[1]: Leaving directory '/rtl/r8168/src'
+make -C src/ modules
+make[1]: Entering directory '/rtl/r8168/src'
+make -C /lib/modules/6.1.0-11-amd64/build M=/rtl/r8168/src modules
+make[2]: Entering directory '/usr/src/linux-headers-6.1.0-11-amd64'
+  CC [M]  /rtl/r8168/src/r8168_n.o
+  CC [M]  /rtl/r8168/src/r8168_asf.o
+  CC [M]  /rtl/r8168/src/rtl_eeprom.o
+  CC [M]  /rtl/r8168/src/rtltool.o
+  LD [M]  /rtl/r8168/src/r8168.o
+  MODPOST /rtl/r8168/src/Module.symvers
+  CC [M]  /rtl/r8168/src/r8168.mod.o
+  LD [M]  /rtl/r8168/src/r8168.ko
+  BTF [M] /rtl/r8168/src/r8168.ko
+make[2]: Leaving directory '/usr/src/linux-headers-6.1.0-11-amd64'
+make[1]: Leaving directory '/rtl/r8168/src'
+make -C src/ install
+make[1]: Entering directory '/rtl/r8168/src'
+make -C /lib/modules/6.1.0-11-amd64/build M=/rtl/r8168/src INSTALL_MOD_DIR=kernel/drivers/net/ethernet/realtek modules_install
+make[2]: Entering directory '/usr/src/linux-headers-6.1.0-11-amd64'
+  INSTALL /lib/modules/6.1.0-11-amd64/kernel/drivers/net/ethernet/realtek/r8168.ko
+  DEPMOD  /lib/modules/6.1.0-11-amd64
+make[2]: Leaving directory '/usr/src/linux-headers-6.1.0-11-amd64'
+make[1]: Leaving directory '/rtl/r8168/src'
