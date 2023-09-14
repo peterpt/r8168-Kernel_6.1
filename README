@@ -2,6 +2,13 @@
 
 - Patch applied : https://github.com/mtorromeo/r8168/issues/46
 
+Notes : When r8169 & r8168-dkms fails then this is probable the only option left .
+After installing the driver in case you have yout network configured as static ip then change it to dhcp 
+, restart networking , then reedit again interfaces in /etc/network/ and set again for static ip and restart network .
+In case it fails then quote dns servers line and test again .
+In my case i had to do all this and quote my static dns-servers , and it started to work fine , did not tested
+if unquoted the static dns servers would make network connections possible again .
+
 <Linux device driver for Realtek Ethernet controllers>
 
 	This is the Linux device driver released for RealTek RTL8168B/8111B, RTL8168C/8111C, RTL8168CP/8111CP, RTL8168D/8111D, RTL8168DP/8111DP, and RTL8168E/8111E Gigabit Ethernet controllers with PCI-Express interface.
